@@ -1,5 +1,5 @@
-FROM bijukunjummen/rabbitmq-base:3.7.0
-MAINTAINER Biju Kunjummen biju.kunjummen@gmail.com
+FROM fantuan/rabbitmq-base:3.7.0
+MAINTAINER lxc1317@hotmail.com
 
 ADD rabbitmq.config /etc/rabbitmq/
 ADD erlang.cookie /var/lib/rabbitmq/.erlang.cookie

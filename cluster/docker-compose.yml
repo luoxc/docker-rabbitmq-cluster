@@ -1,15 +1,16 @@
 rabbit1:
   image: fantuan/rabbitmq-server:3.7.0
-  hostname: rabbit1
+  hostname: rabbit1.fantuan.io
   ports:
     - "5672:5672"
     - "15672:15672"
   environment:
-    - RABBITMQ_DEFAULT_USER=myuser
-    - RABBITMQ_DEFAULT_PASS=mypass
+    - RABBITMQ_DEFAULT_USER=luoxc
+    - RABBITMQ_DEFAULT_PASS=luoxc
+    
 rabbit2:
   image: fantuan/rabbitmq-server:3.7.0
-  hostname: rabbit2
+  hostname: rabbit2.fantuan.io
   links:
     - rabbit1
   environment:
@@ -22,7 +23,7 @@ rabbit2:
 
 rabbit3:
   image: fantuan/rabbitmq-server:3.7.0
-  hostname: rabbit3
+  hostname: rabbit3.fantuan.io
   links:
     - rabbit1
     - rabbit2

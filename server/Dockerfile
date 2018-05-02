@@ -1,5 +1,5 @@
 FROM fantuan/rabbitmq-base:3.7.0
-MAINTAINER lxc1317@hotmail.com
+MAINTAINER fantuan lxc1317@hotmail.com
 
 ADD rabbitmq.config /etc/rabbitmq/
 ADD erlang.cookie /var/lib/rabbitmq/.erlang.cookie
